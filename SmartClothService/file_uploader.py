@@ -1,4 +1,7 @@
+import time
+
 import streamlit as st
+from knowledge_base import *
 from streamlit import file_uploader
 
 #add web title
@@ -11,6 +14,9 @@ uploader_file = st.file_uploader(
     accept_multiple_files=False,
 )
 
+if "service" not in st.session_state:
+    st.session_state["service"] = KnowledgeBaseService()
+
 if uploader_file is not None:
     file_name = uploader_file.name
     file_type = uploader_file.type
@@ -21,5 +27,8 @@ if uploader_file is not None:
 
     #getvalue
     content = uploader_file.getvalue().decode("utf-8")
-    st.write(content)
 
+    with st.spinner("Uploading file..."):
+        time.sleep(3)
+        res = st.session_state["service"].str_to_vector(content, file_name)
+        st.write(res)
