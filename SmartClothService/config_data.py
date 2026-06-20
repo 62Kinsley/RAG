@@ -7,3 +7,6 @@ persist_dir = "./chroma_db"
 #textspliter
 separators = ["\n\n", "\n", ".", "!", "?", " ",""]
 max_length = 1000  #开始分割的数量
+
+#
+similarity = 1
