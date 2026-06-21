@@ -2,7 +2,7 @@ from langchain_chroma import Chroma
 import config_data as config
 from langchain_community.embeddings import DashScopeEmbeddings
 
-class RetrieverService(object):
+class RetrieverService():
 
     def __init__(self):
         embedding = DashScopeEmbeddings(
@@ -17,7 +17,7 @@ class RetrieverService(object):
         )
 
     def get_retriever(self):
-        return self.vector_store.as_retriever(search_kwargs={"k": config.similarity})
+        return self.vector_store.as_retriever(search_kwargs={"k": config.top_k})
 
 
 if __name__ == '__main__':
