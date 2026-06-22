@@ -90,5 +90,5 @@ class KnowledgeBaseService(object):
 
 if __name__ == '__main__':
     service = KnowledgeBaseService()
-    res = service.str_to_vector("jaychou", "testfile")
+    res = service.str_to_vector("jolin", "testfile")
     print(res)
