@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (do not commit API keys)
+.env
+.env.*
+
+# Local runtime data (regenerated at runtime)
+SmartClothService/chroma_db/
+SmartClothService/chat_history/
+SmartClothService/md.text
+SmartClothService/config.persist_directory/
