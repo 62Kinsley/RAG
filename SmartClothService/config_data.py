@@ -15,3 +15,9 @@ top_k= 1
 embedding_model = "text-embedding-v4"
 dashscope_api_key = "sk-ws-H.REMXLHX.nivW.MEUCIQDTCKuksYgHNbHA6WreGNMNfi0Rk4_aOnWGb0CfJE9PqQIgWGSnESDyfoHqpuChrccXJZWGXcih9RXSHpC8JvSJydA"
 chat_model = "qwen-max"
+
+session_config = {
+        "configurable":{
+            "session_id": "user_001"
+        }
+    }
